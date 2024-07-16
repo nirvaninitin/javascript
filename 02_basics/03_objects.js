@@ -29,5 +29,3 @@ myObj.greeting = function(){
     console.log(`hello user ${this.name}`);
 }
 console.log(myObj.greeting());
-
-
