@@ -8,11 +8,36 @@ if(true){
     let a = 30;
     const b = 40;
     var c = 50;
-    console.log("inner:",a);
-    console.log("inner:",b);
-    console.log("inner",c); 
+    // console.log("inner:",a);
+    // console.log("inner:",b);
+    // console.log("inner",c); 
 }
-console.log(a);
-console.log(b);
-console.log(c);
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
+function one() {
+    const username = "Nitin";
+    function two() {
+        const company = "Google";
+        console.log(username);
+    }
+    two()
+    // console.log(company);
+}
+one()
+
+// the child function can use the scope var of parent function but the parent can't use the var of the child function 
+
+// example for hoisting
+
+addOne(3)
+function addOne(num) {
+    console.log(num + 1); 
+}
+
+// addTwo(5)
+const addTwo = function(num){
+    console.log(num + 2); 
+}
+addTwo(5)
