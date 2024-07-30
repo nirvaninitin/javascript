@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>      
+</head>
+<body style="background-color: black; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("Java")
+    addLanguage("typescript")
+
+// edit 
+    const secondlang = document.querySelector("li:nth-child(2)")
+    console.log(secondlang);
+    const newli = document.createElement('li')
+    newli.textContent = "HTML"
+    secondlang.replaceWith(newli)
+
+// edit
+    const firstlang = document.querySelector('li:first-child')
+    firstlang.outerHTML = "<li>CSS</li>"
+
+// remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+    const third = document.querySelector('li:nth-child(3)')
+    const thirdele = document.createElement('li')
+    thirdele.textContent = "Javascript"
+    third.replaceWith(thirdele)
+</script>
+</html>
